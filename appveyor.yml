@@ -1,8 +1,9 @@
 version: 1.0.{build}
 
 environment:
-  - echo: echo
-  - echo: echo:second
+  matrix:
+    - echo: echo
+    - echo: echo:second
   
 build: off
 
