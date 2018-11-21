@@ -1,0 +1,10 @@
+version: 1.0.{build}
+
+environment:
+  - echo: echo
+  - echo: echo:second
+  
+build: off
+
+test_script:
+  - npm run %echo%
