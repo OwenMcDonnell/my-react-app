@@ -3,7 +3,7 @@ version: 1.0.{build}
 environment:
   matrix:
     - echo: echo
-    - echo: echo:second
+    #- echo: echo:second
   
 build: off
 
