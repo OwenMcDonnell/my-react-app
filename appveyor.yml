@@ -8,5 +8,6 @@ environment:
 build_script:
   - appveyor PushArtifact appveyor.yml -DeploymentName myArtifact
 
+
 test_script:
   - npm run %echo%
