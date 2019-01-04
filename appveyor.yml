@@ -16,6 +16,8 @@ deploy:
   auth_token:
     secure: YYaba3dPUneRem8KQzFCQCq7EmhJr9P8egf6Bp6OChFwdCkyQXDsL/ImEPe4rKHN
   artifact: myArtifact
+  on:
+    APPVEYOR_REPO_TAG: true  
 
 
 test_script:
