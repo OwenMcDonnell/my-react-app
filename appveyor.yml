@@ -10,8 +10,6 @@ build_script:
   - appveyor PushArtifact appveyor.yml -DeploymentName myArtifact
   
 deploy:
-  tag: $(APPVEYOR_REPO_TAG_NAME)
-  release: test2
   description: 'Release description'
   provider: GitHub
   auth_token:
