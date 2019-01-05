@@ -7,8 +7,8 @@ environment:
     - echo: echo
     #- echo: echo:second
 
-#build: off
-build_script:
+build: off
+before_deploy:
   - appveyor PushArtifact appveyor.yml -DeploymentName myArtifact
   
 deploy:
