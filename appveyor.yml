@@ -16,7 +16,7 @@ deploy:
   provider: GitHub
   auth_token:
     secure: YYaba3dPUneRem8KQzFCQCq7EmhJr9P8egf6Bp6OChFwdCkyQXDsL/ImEPe4rKHN
-  artifact: myArtifact
+  artifact: appveyor.yml
   force_update: true
 
 
