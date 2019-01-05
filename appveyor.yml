@@ -20,7 +20,5 @@ deploy:
   #on:
    # APPVEYOR_REPO_TAG: true
 
-
-
 test_script:
   #- npm run %echo%
