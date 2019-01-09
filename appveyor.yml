@@ -10,7 +10,8 @@ environment:
 build: off
 before_deploy:
   - cd ../..
-  - 7z a -ir **\*_parsed*.xml -bd expected_parsed.zip
+  - dir
+  - 7z a -ir!**\*_parsed*.xml -bd expected_parsed.zip
   - appveyor PushArtifact appveyor.yml -DeploymentName myArtifact
 #build_script:
  # - appveyor PushArtifact appveyor.yml -DeploymentName myArtifact
