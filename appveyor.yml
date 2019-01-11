@@ -14,7 +14,14 @@ build: off
 install:
   #- cd ../..
   - echo %processor_architecture%
-  - wmic OS get OSArchitecture
+  - cmd: >-
+  
+      if %processor_architecture% == 'AMD64 (
+        wmic OS get OSArchitecture
+      ) else (
+        echo "nope"
+      )
+      
   - appveyor PushArtifact appveyor.yml -DeploymentName myArtifact
 #build_script:
  # - appveyor PushArtifact appveyor.yml -DeploymentName myArtifact
