@@ -16,7 +16,7 @@ install:
   - echo %processor_architecture%
   - cmd: >-
   
-      if %processor_architecture% == 'AMD64' (
+      if %processor_architecture% == "AMD64" (
         wmic OS get OSArchitecture
       ) else (
         echo "nope"
