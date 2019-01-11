@@ -1,28 +1,30 @@
 version: 1.0.{build}
 
-#image: Ubuntu
+image: 
+  - Visual studio 2013
+  - Visual studio 2015
+  - Visual studio 2017
 
-environment:
-  matrix:
-    - echo: echo
+#environment:
+ # matrix:
+  #  - echo: echo
     #- echo: echo:second
 
 build: off
-before_deploy:
+install:
   #- cd ../..
-  - dir
-  - 7z a -ir!**\*_parsed*.xml -bd expected_parsed.zip
+  - echo %processor_architecture%
   - appveyor PushArtifact appveyor.yml -DeploymentName myArtifact
 #build_script:
  # - appveyor PushArtifact appveyor.yml -DeploymentName myArtifact
   
-deploy:
-  release: testing
-  description: 'Release description'
-  provider: GitHub
-  auth_token:
-    secure: YYaba3dPUneRem8KQzFCQCq7EmhJr9P8egf6Bp6OChFwdCkyQXDsL/ImEPe4rKHN
-  artifact: myArtifact
+#deploy:
+ # release: testing
+  #description: 'Release description'
+  #provider: GitHub
+  #auth_token:
+   # secure: YYaba3dPUneRem8KQzFCQCq7EmhJr9P8egf6Bp6OChFwdCkyQXDsL/ImEPe4rKHN
+  #artifact: myArtifact
   #force_update: true
   #on:
    # APPVEYOR_REPO_TAG: true
