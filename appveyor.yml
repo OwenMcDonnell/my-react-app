@@ -13,8 +13,7 @@ image:
 build: off
 install:
   #- cd ../..
-  - echo %processor_architecture%
-  - echo %platform%
+  - echo %processor_architecture% %platform%
   - appveyor PushArtifact appveyor.yml -DeploymentName myArtifact
 #build_script:
  # - appveyor PushArtifact appveyor.yml -DeploymentName myArtifact
