@@ -13,7 +13,8 @@ image:
 build: off
 install:
   #- cd ../..
-  - echo %processor_architecture% %platform%
+  - echo %processor_architecture%
+  - wmic OS get OSArchitecture
   - appveyor PushArtifact appveyor.yml -DeploymentName myArtifact
 #build_script:
  # - appveyor PushArtifact appveyor.yml -DeploymentName myArtifact
