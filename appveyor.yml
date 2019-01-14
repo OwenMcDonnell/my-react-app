@@ -9,7 +9,7 @@ image:
  # matrix:
   #  - echo: echo
     #- echo: echo:second
-
+skip_branch_with_pr: true
 build: off
 install:
   #- cd ../..
