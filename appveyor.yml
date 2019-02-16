@@ -15,7 +15,7 @@ platform:
 skip_branch_with_pr: true
 build: off
 install:
-  #- cd ../..
+
   - echo %platform%
   - echo %processor_architecture%
   - cmd: if %processor_architecture% == AMD64 (wmic OS get OSArchitecture)
@@ -36,5 +36,3 @@ install:
   #on:
    # APPVEYOR_REPO_TAG: true
 
-test_script:
-  #- npm run %echo%
