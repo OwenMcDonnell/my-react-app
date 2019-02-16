@@ -21,7 +21,7 @@ install:
   - cmd: if %processor_architecture% == AMD64 (wmic OS get OSArchitecture)
 
       
-  - appveyor PushArtifact appveyor.yml -DeploymentName myArtifact
+  - appveyor PushArtifact appveyor.yml README.md -DeploymentName myArtifact
 #build_script:
  # - appveyor PushArtifact appveyor.yml -DeploymentName myArtifact
   
