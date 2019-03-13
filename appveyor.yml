@@ -19,10 +19,12 @@ install:
   - echo %platform%
   - echo %processor_architecture%
   - cmd: if %processor_architecture% == AMD64 (wmic OS get OSArchitecture)
-
+  - echo %APPVEYOR_BUILD_NUMBER% > archive/test-file.txt
       
   - appveyor PushArtifact appveyor.yml README.md -DeploymentName myArtifact
   - appveyor PushArtifact README.md -DeploymentName myArtifact
+build_script:
+  - 7z a archive.zip %APPVEYOR_BUILD_FOLDER%/archive/*
 #build_script:
  # - appveyor PushArtifact appveyor.yml -DeploymentName myArtifact
   
