@@ -24,10 +24,10 @@ install:
   #- appveyor PushArtifact appveyor.yml README.md -DeploymentName myArtifact
   #- appveyor PushArtifact README.md -DeploymentName myArtifact
 build_script:
-  - mkdir archive
+  #- mkdir archive
   - 7z a archive.zip appveyor.yml
 artifacts:
-  - path: archive.zip
+  - path: ./archive.zip
     name: archive
 #build_script:
  # - appveyor PushArtifact appveyor.yml -DeploymentName myArtifact
