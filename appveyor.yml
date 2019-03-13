@@ -44,7 +44,7 @@ artifacts:
    # APPVEYOR_REPO_TAG: true
 deploy:
   provider: Environment
-  name: test-agent-script
+  name: ProjectA
   #auth_token:
    # secure: YYaba3dPUneRem8KQzFCQCq7EmhJr9P8egf6Bp6OChFwdCkyQXDsL/ImEPe4rKHN
   #artifact: myArtifact
