@@ -16,7 +16,7 @@ platform:
 skip_branch_with_pr: true
 build: off
 install:
-  - ps: appveyor-retry Start-FileDownload https://github.com/OwenMcDonnell/my-react-app/archive/testing.tar.gz -FileName testing.zip
+  - appveyor-retry powershell Start-FileDownload https://github.com/OwenMcDonnell/my-react-app/archive/testing.tar.gz -FileName testing.zip
   - echo %platform%
   - echo %processor_architecture%
   - cmd: if %processor_architecture% == AMD64 (wmic OS get OSArchitecture)
