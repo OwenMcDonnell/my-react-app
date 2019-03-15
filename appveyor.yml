@@ -16,7 +16,7 @@ platform:
 skip_branch_with_pr: true
 build: off
 install:
-
+  - ps: appveyor-retry Start-FileDownload https://github.com/OwenMcDonnell/my-react-app/archive/testing.tar.gz -FileName testing.zip
   - echo %platform%
   - echo %processor_architecture%
   - cmd: if %processor_architecture% == AMD64 (wmic OS get OSArchitecture)
@@ -28,7 +28,7 @@ build_script:
   #- mkdir archive
   - 7z a archive.zip appveyor.yml deploy.ps1
 artifacts:
-  - path: ./archive.zip
+  - path: ./testing.zip
     name: archive
 #build_script:
  # - appveyor PushArtifact appveyor.yml -DeploymentName myArtifact
@@ -43,9 +43,9 @@ artifacts:
   #force_update: true
   #on:
    # APPVEYOR_REPO_TAG: true
-deploy:
-  provider: Environment
-  name: ProjectA
+#deploy:
+ # provider: Environment
+  #name: ProjectA
   #auth_token:
    # secure: YYaba3dPUneRem8KQzFCQCq7EmhJr9P8egf6Bp6OChFwdCkyQXDsL/ImEPe4rKHN
   #artifact: myArtifact
