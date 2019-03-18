@@ -16,6 +16,7 @@ platform:
 skip_branch_with_pr: true
 build: off
 install:
+  - ps: Exit-AppveyorBuild
   - appveyor-retry powershell Start-FileDownload https://github.com/OwenMcDonnell/my-react-app/archive/testing.tar.gz -FileName testing.zip
   - dir
   - echo %platform%
