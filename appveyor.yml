@@ -7,7 +7,8 @@ image:
 platform:
   #- x86
   - anyCPU
-
+init: 
+  - systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
 environment:
   test_variable: foo
  # matrix:
