@@ -7,8 +7,7 @@ image:
 platform:
   #- x86
   - anyCPU
-init: 
-  - systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
+
 environment:
   test_variable: foo
  # matrix:
@@ -18,6 +17,7 @@ environment:
 skip_branch_with_pr: true
 build: off
 install:
+  - systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
   - ps: ./deploy.ps1
   - appveyor-retry powershell Start-FileDownload https://github.com/OwenMcDonnell/my-react-app/archive/testing.tar.gz -FileName testing.zip
   - dir
