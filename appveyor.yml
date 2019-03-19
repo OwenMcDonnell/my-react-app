@@ -3,6 +3,7 @@ version: 1.0.{build}
 image: 
   #- Visual studio 2013
   #- Visual studio 2015
+  - Visual Studio 2017
   - Windows Server 2019
 platform:
   #- x86
@@ -17,7 +18,7 @@ environment:
 skip_branch_with_pr: true
 build: off
 install:
-  - ps: Import-PfxCertificate -FilePath C:\projects\my-react-app\mypfx.pfx -CertStoreLocation Cert:\LocalMachine\My -Password "testing"
+  - ps: Import-PfxCertificate -FilePath C:\projects\my-react-app\mypfx.pfx -CertStoreLocation Cert:\LocalMachine\My  -Password (ConvertTo-SecureString -String "testing" -AsPlainText -Force)
   - systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
   - ps: ./deploy.ps1
   - appveyor-retry powershell Start-FileDownload https://github.com/OwenMcDonnell/my-react-app/archive/testing.tar.gz -FileName testing.zip
