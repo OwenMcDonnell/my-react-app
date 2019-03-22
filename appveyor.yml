@@ -18,7 +18,7 @@ environment:
 skip_branch_with_pr: true
 build: off
 install:
-  - curl -fsS -o python-install.exe https://www.python.org/ftp/python/3.6.8/python-3.6.8-amd64-webinstall.exe
+  - curl -fsS -o python-install.exe https://www.python.org/ftp/python/3.7.2/python-3.7.2-amd64.exe
   - dir
   - python-install /passive TargetDir="C:\Pyth" InstallAllUsers=1 PrependPath=1 InstallLauncherAllUsers=0 Shortcuts=0 Include_doc=0 Include_test=0 Include_tcltk=0
   - python -VV
