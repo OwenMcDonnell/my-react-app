@@ -20,7 +20,7 @@ build: off
 install:
   - curl -fsS -o python-install.exe https://www.python.org/ftp/python/3.7.2/python-3.7.2-amd64.exe
   - dir
-  - python-install /quiet InstallAllUsers=1 PrependPath=1 InstallLauncherAllUsers=0 Shortcuts=0 Include_doc=0 Include_test=0 Include_tcltk=0
+  - python-install /quiet /passive TargetDir="C:\NewPython35_x64" InstallAllUsers=1 PrependPath=1 InstallLauncherAllUsers=0 Shortcuts=0 Include_doc=0 Include_test=0 Include_tcltk=0
   - python -VV
   #- ps: Import-PfxCertificate -FilePath C:\projects\my-react-app\mypfx2.pfx -CertStoreLocation Cert:\LocalMachine\My  -Password (ConvertTo-SecureString -String "testing" -AsPlainText -Force)
   #- systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
