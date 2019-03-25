@@ -18,7 +18,7 @@ environment:
 skip_branch_with_pr: true
 build: off
 install:
-  - cmd /c "C:\Users\appveyor\AppData\Local\Package Cache\{c0f1e976-f585-48f8-968d-48c870496d4e}\python-3.7.2-amd64.exe" /uninstall /nointeractive
+  - C:\Users\appveyor\AppData\Local\"Package Cache"\{c0f1e976-f585-48f8-968d-48c870496d4e}\python-3.7.2-amd64.exe /uninstall /nointeractive
   #- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
   - curl -fsS -o python-install.exe https://www.python.org/ftp/python/3.7.2/python-3.7.2-amd64.exe
   - dir
