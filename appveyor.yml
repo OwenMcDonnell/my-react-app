@@ -22,7 +22,8 @@ install:
   #- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
   - curl -fsS -o python-install.exe https://www.python.org/ftp/python/3.7.2/python-3.7.2-amd64.exe
   - dir
-  - python-install /passive /quiet TargetDir="C:\Pyth" InstallAllUsers=1
+  - python-install /passive /quiet TargetDir="C:\Pyth" InstallAllUsers=1 PrependPath=1
+  - dir "C:/"
   - python -VV
   #- ps: Import-PfxCertificate -FilePath C:\projects\my-react-app\mypfx2.pfx -CertStoreLocation Cert:\LocalMachine\My  -Password (ConvertTo-SecureString -String "testing" -AsPlainText -Force)
   #- systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
