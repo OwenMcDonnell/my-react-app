@@ -23,7 +23,7 @@ install:
   
   - curl -fsS -o python-install.exe https://www.python.org/ftp/python/3.7.2/python-3.7.2-amd64.exe
   - dir "C:/python37-x64"
-  - python-install /passive /quiet InstallAllUsers=1 PrependPath=1
+  - python-install /passive /quiet targetdir="C:/python37-x64" InstallAllUsers=1 PrependPath=1
   - dir "C:/python37-x64"
   - python -VV
   #- ps: Import-PfxCertificate -FilePath C:\projects\my-react-app\mypfx2.pfx -CertStoreLocation Cert:\LocalMachine\My  -Password (ConvertTo-SecureString -String "testing" -AsPlainText -Force)
