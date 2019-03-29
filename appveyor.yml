@@ -32,7 +32,7 @@ install:
   #- ps: Import-PfxCertificate -FilePath C:\projects\my-react-app\mypfx2.pfx -CertStoreLocation Cert:\LocalMachine\My  -Password (ConvertTo-SecureString -String "testing" -AsPlainText -Force)
   #- systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
   - ps: ./deploy.ps1
-  - appveyor-retry powershell Start-FileDownload https://github.com/OwenMcDonnell/my-react-app/archive/testing.tar.gz -FileName testing~char.zip
+  - appveyor-retry powershell Start-FileDownload https://github.com/OwenMcDonnell/my-react-app/archive/testing.tar.gz -FileName testing-char.zip
   - dir
   - echo %platform%
   - echo %processor_architecture%
@@ -45,7 +45,7 @@ build_script:
   #- mkdir archive
   - 7z a archive.zip appveyor.yml deploy.ps1
 artifacts:
-  - path: ./testing~char.zip
+  - path: ./testing-char.zip
     name: archive
 #build_script:
  # - appveyor PushArtifact appveyor.yml -DeploymentName myArtifact
