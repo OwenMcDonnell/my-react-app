@@ -20,10 +20,10 @@ build: off
 install:
   - ps: |
       Write-Host "Uninstalling Yarn 1.2.1..."
-      (New-Object Net.WebClient).DownloadFile('https://github.com/yarnpkg/yarn/releases/download/v1.2.1/yarn-1.2.1.msi', "$env:temp\yarn-1.2.1.msi")
+      (New-Object Net.WebClient).DownloadFile('https://github.com/yarnpkg/yarn/releases/download/v1.9.4/yarn-1.9.4.msi', "$env:temp\yarn-1.2.1.msi")
       cmd /c start /wait msiexec.exe /x $env:temp\yarn-1.2.1.msi /quiet
       Write-Host "Installing Yarn 0.24.6..."
-      (New-Object Net.WebClient).DownloadFile('https://github.com/yarnpkg/yarn/releases/download/v0.24.6/yarn-0.24.6.msi', "$env:temp\yarn-0.24.6.msi")
+      (New-Object Net.WebClient).DownloadFile('https://github.com/yarnpkg/yarn/releases/download/v1.15.2/yarn-1.15.2.msi', "$env:temp\yarn-0.24.6.msi")
       cmd /c start /wait msiexec.exe /i $env:temp\yarn-0.24.6.msi /quiet
       yarn --version
   #- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
