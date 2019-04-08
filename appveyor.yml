@@ -52,9 +52,9 @@ install:
 build_script:
   - mkdir archive
 after_build:
-  - 7z a archive.zip appveyor.yml ^
-  - package.json ^
-  - deploy.ps1
+  - 7z a archive.zip appveyor.yml
+    package.json
+    deploy.ps1
          
 artifacts:
   - path: ./archive.zip
