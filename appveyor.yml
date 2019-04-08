@@ -54,7 +54,6 @@ build_script:
   - cmd: >-
   
          7z a archive.zip appveyor.yml
-         
          package.json
          deploy.ps1
          
