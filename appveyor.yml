@@ -51,9 +51,9 @@ install:
   #- appveyor PushArtifact README.md -DeploymentName myArtifact
 build_script:
   #- mkdir archive
-  - cmd: 7z a archive.zip appveyor.yml
-         package.json
-         deploy.ps1
+  - 7z a archive.zip appveyor.yml
+    package.json
+    deploy.ps1
          
 artifacts:
   - path: ./archive.zip
