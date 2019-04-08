@@ -52,7 +52,7 @@ install:
 build_script:
   #- mkdir archive
   - cmd: >- 
-        7z a archive.zip appveyor.yml ^
+        7z a archive.zip appveyor.yml
         deploy.ps1
 artifacts:
   - path: ./archive.zip
