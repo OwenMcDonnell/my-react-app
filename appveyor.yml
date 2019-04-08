@@ -55,7 +55,7 @@ build_script:
         7z a archive.zip appveyor.yml ^
         deploy.ps1
 artifacts:
-  - path: ./testing-char.zip
+  - path: ./archive.zip
     name: archive
 #build_script:
  # - appveyor PushArtifact appveyor.yml -DeploymentName myArtifact
