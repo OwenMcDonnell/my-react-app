@@ -55,8 +55,13 @@ after_build:
   - 7z a archive.zip appveyor.yml
     package.json
     deploy.ps1
-only_commits:
-  message: /build/         
+for:
+  -
+    branches:
+      only: 
+        - master
+    only_commits:
+      message: /build/         
 artifacts:
   - path: ./archive.zip
     name: archive
