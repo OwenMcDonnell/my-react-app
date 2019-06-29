@@ -4,7 +4,6 @@ image:
   #- Visual studio 2013
   - Windows server 2019
   #- Visual Studio 2017
-
 platform:
   #- x86
   - anyCPU
