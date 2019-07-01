@@ -63,8 +63,8 @@ for:
     branches:
       only: 
         - master
-    only_commits:
-      message: /build/         
+    #only_commits:
+     # message: /build/         
 artifacts:
   - path: ./archive.zip
     name: archive
