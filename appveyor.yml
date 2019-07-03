@@ -3,6 +3,7 @@ version: 1.0.{build}
 image: 
   #- Visual studio 2013
   #- Windows server 2019
+  
   - Visual Studio 2017
 
 platform:
