@@ -21,7 +21,7 @@ install:
 test_script:
   - ps: write-host "common/default test script"
   - ps: write-host 'platform' $env:PLATFORM
-  - ps: Write-Host "my_var1:" $env:my_var1 "my_var2:" $env:my_var2 "my_var3:" $env:my_var3 "my_var4:" $env:my_var4
+  - ps: Write-Host "matrix1:" $env:matrix1 "matrix2:" $env:matrix2 "matrix3:" $env:matrix3 
 build_script:
  # - 7z a archive.zip %APPVEYOR_BUILD_FOLDER%/archive/*
   - echo "common/default build script"
@@ -44,4 +44,4 @@ for:
            #my_var3: value3
      branches:
        only: 
-         - branch-test
+         - matrix-test
