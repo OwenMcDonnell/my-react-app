@@ -42,5 +42,3 @@ for:
        only:
          - matrix1: matrix_value1
 
-     install: 
-       - ps: write-host "install script"
