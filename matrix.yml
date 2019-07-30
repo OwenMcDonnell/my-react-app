@@ -42,6 +42,4 @@ for:
        only:
          - matrix1: matrix_value1
 
-     branches:
-       only: 
-         - matrix-test
+
