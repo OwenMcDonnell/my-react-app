@@ -41,8 +41,8 @@ for:
      matrix:
        only:
          - matrix1: matrix_value1
-     branches:
-       only: 
-         - matrix-testing
+     #branches:
+      # only: 
+       #  - matrix-testing
     # install: 
      #  - ps: write-host "install script"
