@@ -44,5 +44,5 @@ for:
      branches:
        only: 
          - matrix-testing
-     install: 
-       - ps: write-host "install script"
+    # install: 
+     #  - ps: write-host "install script"
