@@ -38,7 +38,7 @@ build_script:
 for:
   -
      matrix:
-       exclude:
+       only:
          - matrix1: matrix_value1
          - matrix2: matrix_value2
      branches:
