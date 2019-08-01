@@ -36,12 +36,13 @@ build_script:
  #  exclude:
   #   - 
 for:
-  -
-     matrix:
-       exclude:
-         - matrix1: matrix_value1
-     branches:
-       only: 
-         - matrix-testing
+-
+ matrix:
+   only:
+     - matrix1: matrix_value1
+     - matrix2: matrix_value2
+ branches:
+   only: 
+     - branch-test
     # install: 
      #  - ps: write-host "install script"
