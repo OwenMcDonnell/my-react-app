@@ -34,12 +34,11 @@ build_script:
    # site_name: $(site_to_deploy)
 #matrix:
  #  exclude:
-  #   - platform: x86
-   #    my_var4: value4
+  #   - 
 for:
   -
      matrix:
-       only:
+       exclude:
          - matrix1: matrix_value1
      branches:
        only: 
