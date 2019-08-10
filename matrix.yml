@@ -12,10 +12,11 @@ environment:
     - matrix1: matrix_value1
     - matrix2: matrix_value2
     - matrix3: matrix_value3
-
+stack: python 2.7
 #init: 
  # - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 install:
+  - python -V
   - ps: write-host 'platform' $env:PLATFORM
   
 test_script:
