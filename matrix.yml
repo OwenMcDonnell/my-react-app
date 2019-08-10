@@ -43,7 +43,7 @@ for:
 -
  branches:
    only: 
-     - test
+     - master
  matrix:
    only:
      - matrix1: matrix_value1
