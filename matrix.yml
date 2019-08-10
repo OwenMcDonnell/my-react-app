@@ -10,8 +10,11 @@ environment:
   #artifact-name: archive
   matrix:
     - matrix1: matrix_value1
+      common: true
     - matrix2: matrix_value2
+      common: true
     - matrix3: matrix_value3
+      common: false
 stack: python 3.6
 #init: 
  # - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
@@ -56,6 +59,12 @@ for:
    only:
      - matrix1: matrix_value1
      - matrix2: matrix_value2
+-
+  matrix:
+    only:
+      - common: true
+  install:
+    - ps: write_host "only common:true"
 
     # install: 
      #  - ps: write-host "install script"
