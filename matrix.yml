@@ -11,9 +11,11 @@ environment:
   matrix:
     - matrix1: matrix_value1
       common: false
-    - matrix2: matrix_value2
+    - matrix1: matrix_value1
       common: true
-    - matrix3: matrix_value3
+    - matrix2: matrix_value2
+      common: false
+    - matrix2: matrix_value2
       common: true
 stack: python 3.6
 #init: 
@@ -41,24 +43,16 @@ build_script:
   #   - 
 for:
 -
- branches:
-   only: 
-     - master
- matrix:
-   only:
-     - matrix3: matrix_value3
-     #- matrix2: matrix_value2
+  branches:
+    only: 
+      - test
+  matrix:
+    only:
+      - matrix2: matrix_value2
+      #- matrix2: matrix_value2
 
     # install: 
      #  - ps: write-host "install script"
--
- branches:
-   only: 
-     - master
- matrix:
-   only:
-     #- matrix1: matrix_value1
-     - matrix2: matrix_value2
 -
   matrix:
     only:
