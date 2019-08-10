@@ -46,7 +46,7 @@ for:
      - master
  matrix:
    only:
-     - matrix1: matrix_value1
+     - matrix3: matrix_value3
      #- matrix2: matrix_value2
 
     # install: 
