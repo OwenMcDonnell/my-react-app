@@ -43,7 +43,7 @@ for:
 -
  branches:
    only: 
-     - master
+     - test
  matrix:
    only:
      - matrix1: matrix_value1
@@ -57,12 +57,12 @@ for:
      - master
  matrix:
    only:
-     - matrix1: matrix_value1
+     #- matrix1: matrix_value1
      - matrix2: matrix_value2
 -
   matrix:
     only:
-      - common: true
+      - matrix3: matrix_value3
   install:
     - ps: write_host "only common:true"
 
