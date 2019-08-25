@@ -4,6 +4,7 @@ image:
   #- Visual studio 2013
   #- Windows server 2019
   - Visual Studio 2017
+  - Ubuntu
 
 platform:
   #- x86
@@ -71,16 +72,16 @@ artifacts:
 #build_script:
  # - appveyor PushArtifact appveyor.yml -DeploymentName myArtifact
   
-#deploy:
- # release: testing2
-  #description: 'Release description'
-  #provider: GitHub
-  #auth_token:
-   # secure: YYaba3dPUneRem8KQzFCQCq7EmhJr9P8egf6Bp6OChFwdCkyQXDsL/ImEPe4rKHN
+deploy:
+  release: testing2
+  description: 'Release description'
+  provider: GitHub
+  auth_token:
+    secure: YYaba3dPUneRem8KQzFCQCq7EmhJr9P8egf6Bp6OChFwdCkyQXDsL/ImEPe4rKHN
   #artifact: myArtifact
   #force_update: true
-  #on:
-   # APPVEYOR_REPO_TAG: true
+  on:
+    APPVEYOR_REPO_TAG: true
 #deploy:
  # provider: Environment
   #name: ProjectA
