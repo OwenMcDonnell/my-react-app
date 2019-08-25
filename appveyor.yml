@@ -56,14 +56,12 @@ install:
 build_script:
   - mkdir archive
 after_build:
-  - 7z a archive.zip appveyor.yml
-    package.json
-    deploy.ps1
-for:
-  -
-    branches:
-      only: 
-        - master
+  - 7z a archive.zip appveyor.yml package.json deploy.ps1
+#for:
+ # -
+  #  branches:
+   #   only: 
+    #    - master
     #only_commits:
      # message: /build/         
 artifacts:
