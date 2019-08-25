@@ -44,8 +44,8 @@ install:
   #- ps: Import-PfxCertificate -FilePath C:\projects\my-react-app\mypfx2.pfx -CertStoreLocation Cert:\LocalMachine\My  -Password (ConvertTo-SecureString -String "testing" -AsPlainText -Force)
   #- systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
   #- ps: ./deploy.ps1
-  - appveyor-retry powershell Start-FileDownload https://github.com/OwenMcDonnell/my-react-app/archive/testing.tar.gz -FileName testing-char.zip
-  - dir
+  #- appveyor-retry powershell Start-FileDownload https://github.com/OwenMcDonnell/my-react-app/archive/testing.tar.gz -FileName testing-char.zip
+  #- dir
   - echo %platform%
   - echo %processor_architecture%
   - cmd: if %processor_architecture% == AMD64 (wmic OS get OSArchitecture)
