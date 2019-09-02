@@ -4,7 +4,7 @@ image:
   #- Visual studio 2013
   #- Windows server 2019
   - Visual Studio 2017
-  - Ubuntu
+  #- Ubuntu
 
 platform:
   #- x86
@@ -20,6 +20,7 @@ skip_branch_with_pr: true
 build: off
 install:
   - choco upgrade chromedriver --version 75.0.3770.1400
+  - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
   - ps: |
       "cd C:/Projects"
       "$env:test = test_string"
