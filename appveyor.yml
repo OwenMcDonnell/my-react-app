@@ -64,7 +64,7 @@ for:
     matrix:
       only: 
         - image: Ubuntu
-    clone_folder: c:\projects\test
+    clone_folder: $HOME/test
      # message: /build/         
 artifacts:
   - path: ./archive.zip
