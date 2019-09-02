@@ -19,6 +19,7 @@ environment:
 skip_branch_with_pr: true
 build: off
 install:
+  - choco upgrade chromedriver --version 75.0.3770.1400
   - ps: |
       "cd C:/Projects"
       "$env:test = test_string"
