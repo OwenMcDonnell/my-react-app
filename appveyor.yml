@@ -19,8 +19,8 @@ environment:
 skip_branch_with_pr: true
 build: off
 install:
-  - choco upgrade chromedriver --version 75.0.3770.1400
-  - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+  - choco upgrade googlechrome --version 76.0.3809.87
+  
   - ps: |
       "cd C:/Projects"
       "$env:test = test_string"
