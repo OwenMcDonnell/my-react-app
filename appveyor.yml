@@ -4,7 +4,7 @@ image:
   #- Visual studio 2013
   #- Windows server 2019
   - Visual Studio 2017
-  #- Ubuntu
+  - Ubuntu
 
 platform:
   #- x86
@@ -19,7 +19,7 @@ environment:
 skip_branch_with_pr: true
 build: off
 install:
-  - choco upgrade googlechrome --version 76.0.3809.87
+  #- choco upgrade googlechrome --version 76.0.3809.87
   
   - ps: |
       "cd C:/Projects"
@@ -59,12 +59,12 @@ build_script:
   - mkdir archive
 after_build:
   - 7z a archive.zip appveyor.yml package.json deploy.ps1
-#for:
- # -
-  #  branches:
-   #   only: 
-    #    - master
-    #only_commits:
+for:
+  -
+    matrix:
+      only: 
+        - image: Ubuntu
+    clone_folder: c:\projects\test
      # message: /build/         
 artifacts:
   - path: ./archive.zip
